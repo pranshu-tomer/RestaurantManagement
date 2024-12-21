@@ -39,13 +39,13 @@ const registerRestaurant = asyncHandler(async (req,res) => {
         url : `/api/v1/restaurant/menu/${restaurant._id}`
     }
     data = JSON.stringify(data)
-    qr.toFile("./public/temp/qr.png",data,function(err){
+    let qrPath = './public/temp/qr.png'
+    qr.toFile(qrPath,data,function(err){
         if(err){
             throw new apiError(409, "Problem in Generating the QR code")
         }
     })
 
-    let qrPath = './public/temp/qr.png'
     qrPath = await uploadCloudinary(qrPath)
 
     restaurant.qrCode = qrPath

@@ -17,8 +17,8 @@ export default function Navbar() {
             <Link to="/restaurants" className="text-gray-600 hover:text-indigo-600">
               Find Restaurants
             </Link>
-            <Link to="/register" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
-              Register Restaurant
+            <Link to="/login" className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
+              Login
             </Link>
           </div>
         </div>
