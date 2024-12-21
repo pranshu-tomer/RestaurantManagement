@@ -47,7 +47,8 @@ const restaurantSchema = new Schema(
         ],
         password: {
             type: String,
-            required: [true, 'Password is required']
+            required: [true, 'Password is required'],
+            trim: true
         },
     },
     {
